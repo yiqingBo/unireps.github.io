@@ -508,16 +508,43 @@ footer.sticky-bottom {
 }
 
 // Blog
-
 .header-bar {
-  border-bottom: 1px solid var(--global-divider-color);
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding: 2rem 0;
+}
 
-  h1 {
-    color: var(--global-theme-color);
-    font-size: 5rem;
+.header-bar h1 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 3.5rem;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, #007bff, #ff5a5f); /* Blue to Red gradient */
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.header-bar h1:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
