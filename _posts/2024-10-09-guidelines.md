@@ -68,8 +68,16 @@ Start by **forking the repository**. You can do that [here](https://github.com/U
 Next, clone your new repository to your local machine so you can start editing:
 
 ```bash
-git clone git@github.com:<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone git@github.com:UniReps/UniReps.git
+cd UniReps
+```
+
+## Create a new branch
+
+Create a new branch specific for each post submission. We recommend this format for the branch name:
+
+```bash
+git checkout -b post/<your-post-title>
 ```
 
 You could even use the GitHub web interface to directly write the blogpost, but we recommend cloning the repository for a smoother experience.
@@ -98,6 +106,9 @@ We've got a few options depending on your setup. Choose what works best for you:
 
 All these options will start a local server, and you'll be able to preview the website at [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
 
+If you are unsure about which option to choose, we recommend starting with **Option 3** as it's the easiest to set up (assuming you are already using VS Code).
+However, if you run into any issues, don't hesitate to reach out to us for help!
+
 ---
 
 ## Writing Your Post
@@ -123,7 +134,22 @@ If your post includes media (we recommend to include them to exploit the blogpos
 - **Citations**: Save them as a BibTeX file (`.bib`) in `assets/bibliography/YYYY-MM-DD-title.bib`.
 - **Other file types**: follow the structure of the `assets/` folder, placing them in the appropriate subfolder.
 
+To display them in your post, use the following syntax:
+```html
+![Your Media]({{ '/assets/complete/media/path/including.extension' | relative_url }})
+```
+
+For example, if you have an image `unireps_banner.jpeg` in the folder `assets/img/2024-10-09-guidelines/`, you would include it in your post like this:
+```html
+![My Image]({{ '/assets/img/2024-10-09-guidelines/unireps_banner.jpeg' | relative_url }})
+```
+Resulting in:
+![My Image]({{ '/assets/img/2024-10-09-guidelines/unireps_banner.jpeg' | relative_url }})
+
+For more examples on how to include media, check the [Post Template](https://unireps.org/blog/2024-10-09-template) or the [Distill Guide](https://distill.pub/guide/).
+
 ---
+
 
 ## Submitting Your Blogpost
 
