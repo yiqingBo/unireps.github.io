@@ -115,6 +115,16 @@ However, if you run into any issues, don't hesitate to reach out to us for help!
 
 Now to the exciting part—**writing your blogpost**!
 
+### Topics and Styles 📝
+
+We welcome blogposts of different nature:
+- New or early-stage research results 🧑‍🔬
+- Tutorial-style summaries of key methods and literature 🔍
+- Opinion pieces on relevant topics in UniReps 🧠
+- And more!
+
+Remember, the goal is to share your insights, spark discussions, and connect with the community. Keep it engaging and accessible to the [broad workshop audience](https://unireps.org/2024/)!
+
 ### Create a New Post
 
 Head over to the `_posts/` directory and create a new file following this format:

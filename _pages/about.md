@@ -30,7 +30,7 @@ pagination:
 
 <p>At the exciting intersection of neuroscience and artificial intelligence, a fascinating pattern emerges: different neural models often converge on similar representations when exposed to the same stimuli. Our UniReps Blogpost Track, is a fresh and creative platform for sharing insights, fostering transparent discussions, and sparking interdisciplinary collaborations on this topic.</p>
 
-<p><strong>Why blogposts?</strong> Not everything fits neatly into a research paper! Blogposts offer a flexible, engaging way to communicate cutting-edge ideas, early-stage results, or even well-established methods. Drawing inspiration from formats like <a href="https://distill.pub">Distill</a>, this track allows for clearer storytelling and makes complex research accessible to a broader audience.</p>
+<p><strong>Why blogposts?</strong> Not everything fits neatly into a research paper! Blogposts offer a flexible, engaging way to communicate cutting-edge ideas, early-stage results, or even well-established methods. Drawing inspiration from formats like <a href="https://distill.pub">Distill</a>, and being already tested in venues like <a href="https://iclr-blogposts.github.io">ICLR</a> and the <a href="https://gram-blogposts.github.io">GRAM workshop</a> (for a sample blogpost directly from them, scroll down!), this track allows for clearer storytelling and makes complex research accessible to a broader audience.</p>
 
 <p><strong>What can you submit?</strong> We welcome blogposts that cover a wide range of formats, including:
 <ul>
@@ -42,9 +42,16 @@ pagination:
 
 <p>All submissions will undergo peer review, and accepted posts will be published on our website and promoted across social channels. You'll also get the opportunity to present your blogpost in a poster format during the workshop!</p>
 
-<p><a href="/blog/2024/guidelines">🔗 Learn how to submit your blogpost here</a>
+<p><a href="/blog/2024/guidelines">🔗 Learn how to submit your blogpost here</a></p>
 
-<p>Join our <a href="https://discord.gg/XdeamXWsFE">Discord community</a> 🟣!</p>
+<strong>Important dates</strong>:
+<ul>
+  <li>To showcase your blogpost during the poster session of UniReps at NeurIPS 2024, the submission deadline is: 
+  <br>
+  <strong>25th November 2024 (AoE)</strong></li>
+</ul>
+
+<p>For additional questions, discussion, and updates, join our <a href="https://discord.gg/XdeamXWsFE">Discord community</a> 🟣!</p>
 
 </div>
 

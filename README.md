@@ -13,7 +13,7 @@ Once accepted, your blogpost will be featured on our website and promoted on [so
 
 ## How to Submit
 
-The official guidelines for submitting a blogpost can be found [here](https://unireps.com/blog/2024/guidelines). In summary, you should:
+The official guidelines for submitting a blogpost can be found [here](https://unireps.org/blog/2024/guidelines). In summary, you should:
 1. Fork this repository.
 2. Create a new folder with the title of your blogpost.
 3. Add your blogpost with as many images, figures, and code snippets as you like. The more engaging, the better!
@@ -23,6 +23,6 @@ The official guidelines for submitting a blogpost can be found [here](https://un
 
 ## Community and Support
 
-Need help? Join our [Discord community](https://discord.gg/XdeamXWsFE) or consult the [submission guide](https://unireps.com/blog/2024/guidelines) for more information.
+Need help? Join our [Discord community](https://discord.gg/XdeamXWsFE) or consult the [submission guide](https://unireps.org/blog/2024/guidelines) for more information.
 
 We look forward to your contributions!
