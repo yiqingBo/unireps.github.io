@@ -7,60 +7,46 @@ giscus_comments: true
 date: 2024-11-20
 featured: true
 
-# authors:
-#   - name: Albert Einstein
-#     url: "https://en.wikipedia.org/wiki/Albert_Einstein"
-#     affiliations:
-#       name: IAS, Princeton
-#   - name: Boris Podolsky
-#     url: "https://en.wikipedia.org/wiki/Boris_Podolsky"
-#     affiliations:
-#       name: IAS, Princeton
-#   - name: Nathan Rosen
-#     url: "https://en.wikipedia.org/wiki/Nathan_Rosen"
-#     affiliations:
-#       name: IAS, Princeton
-
 authors:
   - name: Yiqing Bo
-    url: "mailto:ybo@ucsd.edu"
+    email: "ybo@ucsd.edu"
     affiliations:
       name: "Department of Cognitive Science, UC San Diego"
   - name: Ansh Soni
-    url: "mailto:anshsoni@sas.upenn.edu"
+    email: "anshsoni@sas.upenn.edu"
     affiliations:
       name: "Department of Psychology, University of Pennsylvania"
   - name: Sudhanshu Srivastava
-    url: "mailto:sus021@ucsd.edu"
+    email: "sus021@ucsd.edu"
     affiliations:
       name: "Department of Cognitive Science, UC San Diego"
   - name: Meenakshi Khosla
-    url: "mailto:mkhosla@ucsd.edu"
+    email: "mkhosla@ucsd.edu"
     affiliations:
-      name: "Department of Cognitive Science, UC San Diego; Department of Computer Science, UC San Diego"
+      name: "Department of Cognitive Science, UC San Diego"
 
 
 # bibliography: 2018-12-22-distill.bib
 bibliography: 2024-11-20-downstream-functional-correspondence.bib
 
-# Optionally, you can add a table of contents to your post.
-# NOTES:
-#   - make sure that TOC names match the actual section names
-#     for hyperlinks within the post to work correctly.
-#   - we may want to automate TOC generation in the future using
-#     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
-toc:
-  - name: Equations
-    # if a section has subsections, you can add them as follows:
-    # subsections:
-    #   - name: Example Child Subsection 1
-    #   - name: Example Child Subsection 2
-  - name: Citations
-  - name: Footnotes
-  - name: Code Blocks
-  - name: Interactive Plots
-  - name: Layouts
-  - name: Other Typography?
+# # Optionally, you can add a table of contents to your post.
+# # NOTES:
+# #   - make sure that TOC names match the actual section names
+# #     for hyperlinks within the post to work correctly.
+# #   - we may want to automate TOC generation in the future using
+# #     jekyll-toc plugin (https://github.com/toshimaru/jekyll-toc).
+# toc:
+#   - name: Equations
+#     # if a section has subsections, you can add them as follows:
+#     # subsections:
+#     #   - name: Example Child Subsection 1
+#     #   - name: Example Child Subsection 2
+#   - name: Citations
+#   - name: Footnotes
+#   - name: Code Blocks
+#   - name: Interactive Plots
+#   - name: Layouts
+#   - name: Other Typography?
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -83,8 +69,8 @@ _styles: >
 
 
 # Introduction
-<d-cite key="yamins2014performance"></d-cite> 
-d-cite key="gregor2015draw"></d-cite> 
+
+
 Both neuroscience and artificial intelligence (AI) confront the
 challenge of high-dimensional neural data, whether from neurobiological
 firing rates, voxel responses, or hidden layer activations in artificial
@@ -97,11 +83,12 @@ drives behavior and to understand neural computations at an algorithmic
 level. Comparisons across species and between brain and model
 representations, particularly those of deep neural networks, have been
 instrumental in advancing this
-understanding ([@yamins2014performance; @eickenberg2017seeing; @gucclu2015deep; @cichy2016comparison; @KriegeskorteRSA; @schrimpf2018brain; @schrimpf2020integrative; @storrs2021diverse; @kriegeskorte2008representational]).
+understanding (<d-cite key="yamins2014performance"></d-cite>, <d-cite key="eickenberg2017seeing"></d-cite>, <d-cite key="gucclu2015deep"></d-cite>, <d-cite key="cichy2016comparison"></d-cite>, <d-cite key="KriegeskorteRSA"></d-cite>, <d-cite key="schrimpf2018brain"></d-cite>, <d-cite key="schrimpf2020integrative"></d-cite>, <d-cite key="storrs2021diverse"></d-cite>, <d-cite key="kriegeskorte2008representational"></d-cite>).
 A growing interest lies in systematically altering model
 parameters---such as architecture, learning objectives, and training
 data---and comparing the resulting internal representations with neural
-data ([@yamins2016using; @doerig2023neuroconnectionist; @schrimpf2018brain; @schrimpf2020integrative]).
+data (<d-cite key="yamins2016using"></d-cite>, <d-cite key="doerig2023neuroconnectionist"></d-cite>, <d-cite key="schrimpf2018brain"></d-cite>, <d-cite key="schrimpf2020integrative"></d-cite>
+).
 
 Similarly, in AI, researchers are increasingly focused on
 reverse-engineering neural networks by tweaking architectural
@@ -115,7 +102,8 @@ deeply. This endeavor is rooted in the universality hypothesis that
 similar phenomena can arise across different networks. Indeed, a large
 number of studies have provided empirical evidence licensing these
 universal
-theories ([@huh2024platonic; @kornblith2019similarity; @bansal2021revisiting; @li2015convergent; @roeder2021linear; @lenc2015understanding])
+theories (<d-cite key="huh2024platonic"></d-cite>, <d-cite key="kornblith2019similarity"></d-cite>, <d-cite key="bansal2021revisiting"></d-cite>, <d-cite key="li2015convergent"></d-cite>, <d-cite key="roeder2021linear"></d-cite>, <d-cite key="lenc2015understanding"></d-cite>
+)
 but the extent to which diverse neural networks converge to similar
 representations is not well understood.
 
@@ -124,11 +112,12 @@ and AI, a key question arises: what are the best tools for conducting
 such analyses? Over the past decade, a wide variety of approaches have
 emerged for quantifying the representational similarity across
 artificial and biological neural
-representations ([@gettingaligned; @klabunde2023similarity; @williams2021generalized]).
+representations (<d-cite key="gettingaligned"></d-cite>, <d-cite key="klabunde2023similarity"></d-cite>, <d-cite key="williams2021generalized"></d-cite>).
 Most of these approaches can be classified as belonging to one of four
 categories: representational similarity based measures, alignment-based
 measures, nearest-neighbor based measures and canonical correlation
-analysis-based measures ([@klabunde2023similarity]). With the wide range
+analysis-based measures (<d-cite key="klabunde2023similarity"></d-cite>
+). With the wide range
 of available approaches for representational comparisons, researchers
 are tasked with selecting a suitable metric. The choice of a specific
 metric implicitly prioritizes certain properties of the system, as
@@ -136,7 +125,7 @@ different approaches emphasize distinct invariances and are sensitive to
 varying aspects of the representations. This complexity ties into
 broader issues in the concept and assessment of similarity, which, as
 emphasized in psychology, is highly
-context-dependent ([@tversky1977features]).
+context-dependent (<d-cite key="tversky1977features"></d-cite>).
 
 What, then, are the key desiderata for network comparison metrics?
 Networks may exhibit similarities in some dimensions and differences in
@@ -144,7 +133,7 @@ others, but the critical question is whether these differences are
 functionally relevant or merely reflect differences in origin or
 construction. This consideration leads to a central criterion for
 effective metrics: behavioral differences should correspond to
-differences in internal representational similarity ([@cao2022putting]).
+differences in internal representational similarity (<d-cite key="cao2022putting"></d-cite>).
 However, identifying which measures reliably capture behaviorally
 meaningful differences remains an open question.
 
@@ -355,7 +344,7 @@ $$d\_{\mathrm{T}}(X, Y) = \sqrt{\min\_{P \in \mathrm{T}(N_X, N_Y)} \sum\_{i,j} P
 ## Downstream Behavioral Measures
 
 <figure id="figs:fig1">
-<img src="figs/schematic_rep_eval.png" />
+<img src="/assets/img/2024-11-20-downstream-functional-correspondence/schematic_rep_eval.png" />
 <figcaption>Framework for evaluating representational similarity metrics
 based on their functional correspondence. We conduct pairwise
 comparisons of the representational similarities and behavioral outputs
@@ -503,7 +492,7 @@ study their behavior under random initialization before training.
 # Results
 
 <figure id="figs:fig2a">
-<img src="figs/model_sim_viz.png" />
+<img src="/assets/img/2024-11-20-downstream-functional-correspondence/model_sim_viz.png" />
 <figcaption>Model-by-model similarity matrices from different measures
 on the Cue Conflict task. <strong>Left</strong>: The Procrustes measure
 clearly distinguishes between trained and untrained models.
@@ -552,7 +541,7 @@ differences in how measures distinguish between models, a key question
 emerges: Which distinctions should we prioritize?
 
 <figure id="figs:fig2b">
-<img src="figs/dprimes" style="width:80.0%" />
+<img src="/assets/img/2024-11-20-downstream-functional-correspondence/dprimes.png" style="width:80.0%" />
 <figcaption>Discriminative ability (d’ scores) of (top) representational
 and (bottom) behavioral similarity measures in distinguishing between
 trained vs. untrained models (left) and architectures
@@ -624,7 +613,7 @@ representational similarity measures align with these robust behavioral
 relationships between models.
 
 <figure id="figs:fig3">
-<img src="figs/mds_metric_corr.png" />
+<img src="/assets/img/2024-11-20-downstream-functional-correspondence/mds_metric_corr.png" />
 <figcaption><strong>Consistency Between Similarity Metrics.</strong> (A)
 and (C) display the correlation matrix averaged across all behavioral
 datasets and the 2D-projected multidimensional scaling (MDS) plot (using
@@ -661,7 +650,7 @@ offer crucial guidance for metrics that support behaviorally grounded
 comparisons.
 
 <figure id="figs:fig4">
-<img src="figs/metric_gt_corr_figure.png" />
+<img src="/assets/img/2024-11-20-downstream-functional-correspondence/metric_gt_corr_figure.png" />
 <figcaption><strong>Granular Comparison of Representational Similarity
 Measures with Behavioral Measures</strong>: (A) Average correlation
 between representational and behavioral metrics across datasets. (B)
@@ -717,7 +706,7 @@ similarity measures align more closely with behavior than others is
 currently lacking in our work, but this remains an exciting direction
 for future research.
 
-# Appendix
+## Appendix
 
 ## Downstream Behavioral Datasets
 
@@ -823,7 +812,7 @@ scores across all behavioral measures revealed high correlations,
 indicating consistent uniformity across most datasets.
 
 <figure id="figs:dataset-consis">
-<p><img src="figs/dataset-consistency.png" style="width:80.0%"
+<p><img src="/assets/img/2024-11-20-downstream-functional-correspondence/dataset-consistency.png" style="width:80.0%"
 alt="image" /> <span id="figs:dataset-consis"
 data-label="figs:dataset-consis"></span></p>
 </figure>
@@ -837,12 +826,12 @@ included. Note that the "1 − Procrustes" score can range from (−∞, 1
 whereas all other metrics yield scores within the range \[0, 1\].
 
 <figure id="figs:rep-all">
-<p><embed src="figs/all-rep-sims.pdf" /> <span id="figs:rep-all"
+<p><embed src="/assets/img/2024-11-20-downstream-functional-correspondence/all-rep-sims.pdf" /> <span id="figs:rep-all"
 data-label="figs:rep-all"></span></p>
 </figure>
 
 <figure id="figs:rep-all">
-<p><embed src="figs/all-rep-sims-NN.pdf" /> <span id="figs:rep-all"
+<p><embed src="/assets/img/2024-11-20-downstream-functional-correspondence/all-rep-sims-NN.pdf" /> <span id="figs:rep-all"
 data-label="figs:rep-all"></span></p>
 </figure>
 
@@ -855,12 +844,12 @@ Scores", the alignment value can all range from (−∞, 1\], whereas all
 other measures yield scores within the range \[0, 1\].
 
 <figure id="figs:rep-all">
-<p><embed src="figs/all-behavioral-sims-bin.pdf" /> <span
+<p><embed src="/assets/img/2024-11-20-downstream-functional-correspondence/all-behavioral-sims-bin.pdf" /> <span
 id="figs:rep-all" data-label="figs:rep-all"></span></p>
 </figure>
 
 <figure id="figs:rep-all">
-<p><embed src="figs/all-behavioral-sims.pdf" /> <span id="figs:rep-all"
+<p><embed src="/assets/img/2024-11-20-downstream-functional-correspondence/all-behavioral-sims.pdf" /> <span id="figs:rep-all"
 data-label="figs:rep-all"></span></p>
 </figure>
 
@@ -868,7 +857,7 @@ data-label="figs:rep-all"></span></p>
     represents the mapping from an input to the output of a specific
     layer’s activation in a neural network
 
-## Equations
+<!-- ## Equations
 
 This theme supports rendering beautiful math in inline and display modes using [MathJax 3](https://www.mathjax.org/) engine.
 You just need to surround your math expression with `$$`, like `$$ E = mc^2 $$`.
@@ -902,228 +891,5 @@ However, we consider it good style to mention author last names if you discuss s
 ## Footnotes
 
 Just wrap the text you would like to show up in a footnote in a `<d-footnote>` tag.
-The number of the footnote will be automatically generated.<d-footnote>This will become a hoverable footnote.</d-footnote>
+The number of the footnote will be automatically generated.<d-footnote>This will become a hoverable footnote.</d-footnote> -->
 
----
-
-## Code Blocks
-
-Syntax highlighting is provided within `<d-code>` tags.
-An example of inline code snippets: `<d-code language="html">let x = 10;</d-code>`.
-For larger blocks of code, add a `block` attribute:
-
-<d-code block language="javascript">
-  var x = 25;
-  function(x) {
-    return x * x;
-  }
-</d-code>
-
-**❗️ Note:** `<d-code>` blocks do not look good in the dark mode. ❗️
-
-You can always use the default code-highlight using the `highlight` liquid tag:
-
-{% highlight javascript %}
-var x = 25;
-function(x) {
-return x \* x;
-}
-{% endhighlight %}
-
----
-
-## Interactive Plots
-
-You can add interative plots using plotly + iframes :framed_picture:
-
-<div class="l-page">
-  <iframe src="{{ '/assets/plotly/demo.html' | relative_url }}" frameborder='0' scrolling='no' height="500px" width="100%" style="border: 1px dashed grey;"></iframe>
-</div>
-
-The plot must be generated separately and saved into an HTML file.
-To generate the plot that you see above, you can use the following code snippet:
-
-{% highlight python %}
-import pandas as pd
-import plotly.express as px
-df = pd.read_csv(
-'https://raw.githubusercontent.com/plotly/datasets/master/earthquakes-23k.csv'
-)
-fig = px.density_mapbox(
-df,
-lat='Latitude',
-lon='Longitude',
-z='Magnitude',
-radius=10,
-center=dict(lat=0, lon=180),
-zoom=0,
-mapbox_style="stamen-terrain",
-)
-fig.show()
-fig.write_html('assets/plotly/demo.html')
-{% endhighlight %}
-
----
-
-## Details boxes
-
-Details boxes are collapsible boxes which hide additional information from the user. They can be added with the `details` liquid tag:
-
-{% details Click here to know more %}
-Additional details, where math $$ 2x - 1 $$ and `code` is rendered correctly.
-{% enddetails %}
-
----
-
-## Layouts
-
-The main text column is referred to as the body.
-It is the assumed layout of any direct descendants of the `d-article` element.
-
-<div class="fake-img l-body">
-  <p>.l-body</p>
-</div>
-
-For images you want to display a little larger, try `.l-page`:
-
-<div class="fake-img l-page">
-  <p>.l-page</p>
-</div>
-
-All of these have an outset variant if you want to poke out from the body text a little bit.
-For instance:
-
-<div class="fake-img l-body-outset">
-  <p>.l-body-outset</p>
-</div>
-
-<div class="fake-img l-page-outset">
-  <p>.l-page-outset</p>
-</div>
-
-Occasionally you’ll want to use the full browser width.
-For this, use `.l-screen`.
-You can also inset the element a little from the edge of the browser by using the inset variant.
-
-<div class="fake-img l-screen">
-  <p>.l-screen</p>
-</div>
-<div class="fake-img l-screen-inset">
-  <p>.l-screen-inset</p>
-</div>
-
-The final layout is for marginalia, asides, and footnotes.
-It does not interrupt the normal flow of `.l-body` sized text except on mobile screen sizes.
-
-<div class="fake-img l-gutter">
-  <p>.l-gutter</p>
-</div>
-
----
-
-## Other Typography?
-
-Emphasis, aka italics, with _asterisks_ (`*asterisks*`) or _underscores_ (`_underscores_`).
-
-Strong emphasis, aka bold, with **asterisks** or **underscores**.
-
-Combined emphasis with **asterisks and _underscores_**.
-
-Strikethrough uses two tildes. ~~Scratch this.~~
-
-1. First ordered list item
-2. Another item
-   ⋅⋅\* Unordered sub-list.
-3. Actual numbers don't matter, just that it's a number
-   ⋅⋅1. Ordered sub-list
-4. And another item.
-
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
-
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
-
-- Unordered list can use asterisks
-
-* Or minuses
-
-- Or pluses
-
-[I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-Here's our logo (hover to see the title text):
-
-Inline-style:
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-Reference-style:
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
-Inline `code` has `back-ticks around` it.
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-
-```python
-s = "Python syntax highlighting"
-print s
-```
-
-```
-No language indicated, so no syntax highlighting.
-But let's throw in a <b>tag</b>.
-```
-
-Colons can be used to align columns.
-
-| Tables        |      Are      |  Cool |
-| ------------- | :-----------: | ----: |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
-
-| Markdown | Less      | Pretty     |
-| -------- | --------- | ---------- |
-| _Still_  | `renders` | **nicely** |
-| 1        | 2         | 3          |
-
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
-
-Quote break.
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
-
-Here's a line for us to start with.
-
-This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
-
-This line is also a separate paragraph, but...
-This line is only separated by a single newline, so it's a separate line in the _same paragraph_.
